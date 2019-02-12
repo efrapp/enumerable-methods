@@ -3,7 +3,7 @@ Create custom implementation of some Enumerable methods in Ruby
 
 ## Concepts Applied Here
 
-The idea was to understand how these methods works internally to get a better understanding on how to use them.
+The idea was to understand how these methods work internally to get a better understanding on how to use them.
 
 ## Contributors
 
