@@ -4,22 +4,22 @@ module Enumerable
 		i = 0
 		while i < self.length
 			yield(self[i])
-			i+=1     	
+			i+=1
 		end
-		self     
+		self
 	end
 
 	def my_each_with_index
 		i = 0
 		while i < self.length do
 			yield(self[i],i)
-			i += 1     	
+			i += 1
 		end
 	end
 
 	def my_select
 		selected = []
-		self.my_each do|element| 
+		self.my_each do|element|
 			if yield(element)
 					selected.push(element)
 			end
@@ -27,11 +27,11 @@ module Enumerable
 			selected
 	end
 
-	def my_all?    	
+	def my_all?
 		self.my_each do |element|
 			if !yield(element)
 				return false
-			end    
+			end
 		end
 		true
 	end
@@ -39,8 +39,8 @@ module Enumerable
 	def my_any?
 		self.my_each do |element|
 			if yield(element)
-				return true   
-			end    	  	
+				return true
+			end
 		end
 		false
 	end
@@ -48,29 +48,29 @@ module Enumerable
 	def my_none?
 		self.my_each do |element|
 			if yield(element)
-				return false 
-			end    	  	
+				return false
+			end
 		end
 		true
 	end
 
-	def my_count (number = nil)	
-		if(number)	
+	def my_count (number = nil)
+		if(number)
 			counter = 0
-			self.my_each do |element| 
+			self.my_each do |element|
 				if element == number
 					counter += 1
 				end
 			end
-			return counter		
+			return counter
 		elsif block_given?
 			 counter = 0
-			self.my_each do |element| 
+			self.my_each do |element|
 				if yield(element)
 					counter += 1
 				end
 			end
-			return counter		
+			return counter
 		else
 			return self.length
 		end
@@ -92,11 +92,11 @@ module Enumerable
 			end
 		end
 
-		new_arr
+		new_arr.to_a
 	end
 
 	def my_inject initial = nil
-		
+
 		if initial
 			first_val = initial
 			i = 0
