@@ -1,6 +1,4 @@
-$LOAD_PATH << '.'
-
-require 'enumerator'
+require_relative './enumerator'
 
 # Step 1
 
@@ -31,7 +29,7 @@ puts
 
 puts "Step 4: my_all?"
 
-my_result =  [5, 6, 7, 8, 9, 10].my_all? {|value| value > 2 }
+my_result =  ['a', 'b', 'c', 1].my_all? {|value| value.is_a? String }
 puts my_result
 
 puts
